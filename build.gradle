@@ -1,7 +1,10 @@
 plugins {
     id 'java'
+    id 'application'
+    id 'com.github.johnrengelman.shadow' version '2.0.1'
 }
 
+mainClassName = "Main"
 group 'gently.breakdances'
 version '1.0-SNAPSHOT'
 
@@ -14,4 +17,5 @@ repositories {
 
 dependencies {
     compile 'net.dv8tion:JDA:3.5.0_329'
+    compile files('libs/slf4j-nop-1.7.25.jar')
 }
